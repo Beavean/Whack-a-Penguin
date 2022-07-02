@@ -50,6 +50,11 @@ class WhackSlot: SKNode {
             charNode.name = "charEnemy"
         }
         
+        if let showEmitter = SKEmitterNode(fileNamed: "ShowEffect") {
+            addChild(showEmitter)
+        }
+        
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + (hideTime * 4)) {
             [weak self] in
             self?.Hide()
@@ -68,6 +73,9 @@ class WhackSlot: SKNode {
         let hide = SKAction.moveBy(x: 0, y: -80, duration: 0.5)
         let notVisible = SKAction.run { [weak self] in self?.isVisible = false }
         let sequence = SKAction.sequence([delay, hide, notVisible])
+        if let smokeEmitter = SKEmitterNode(fileNamed: "HitEmitter") {
+            addChild(smokeEmitter)
+        }
         charNode.run(sequence)
         
     }
