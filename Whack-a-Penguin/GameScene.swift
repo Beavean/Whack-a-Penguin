@@ -13,6 +13,7 @@ class GameScene: SKScene {
     var gameScore: SKLabelNode!
     
     var popupTime = 0.85
+    var numberOfRounds = 0
     
     var score = 0 {
         didSet {
@@ -78,6 +79,26 @@ class GameScene: SKScene {
     }
     
     func createEnemy() {
+        numberOfRounds += 1
+        
+        if numberOfRounds >= 50 {
+            for slot in slots {
+                slot.Hide()
+            }
+            let gameOverScore = SKLabelNode(text: "Your score is \(score)")
+            gameOverScore.fontSize = 44
+            gameOverScore.fontName = "Chalkduster"
+            gameOverScore.zPosition = 1
+            gameOverScore.position = CGPoint(x: 512, y: 450)
+            let gameOver = SKSpriteNode(imageNamed: "gameOver")
+            gameOver.position = CGPoint(x: 512, y: 384)
+            gameOver.zPosition = 1
+            run(SKAction.playSoundFileNamed("GameOver.mp3", waitForCompletion: false))
+            addChild(gameOver)
+            addChild(gameOverScore)
+            return
+        }
+        
         popupTime *= 0.995
         slots.shuffle()
         slots[0].show(hideTime: popupTime)

@@ -17,6 +17,7 @@
 		0833C705286494D800928C32 /* whackBad.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0833C703286494D800928C32 /* whackBad.caf */; };
 		0833C706286494D800928C32 /* whack.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0833C704286494D800928C32 /* whack.caf */; };
 		0833C70828649A8F00928C32 /* WhackSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0833C70728649A8F00928C32 /* WhackSlot.swift */; };
+		0888A909287043B600D04CF8 /* GameOver.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0888A908287043B500D04CF8 /* GameOver.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		0833C703286494D800928C32 /* whackBad.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whackBad.caf; sourceTree = "<group>"; };
 		0833C704286494D800928C32 /* whack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whack.caf; sourceTree = "<group>"; };
 		0833C70728649A8F00928C32 /* WhackSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhackSlot.swift; sourceTree = "<group>"; };
+		0888A908287043B500D04CF8 /* GameOver.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GameOver.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				0833C6FB2864931600928C32 /* LaunchScreen.storyboard */,
 				0833C704286494D800928C32 /* whack.caf */,
 				0833C703286494D800928C32 /* whackBad.caf */,
+				0888A908287043B500D04CF8 /* GameOver.mp3 */,
 			);
 			path = "Whack-a-Penguin";
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0833C705286494D800928C32 /* whackBad.caf in Resources */,
+				0888A909287043B600D04CF8 /* GameOver.mp3 in Resources */,
 				0833C6F82864931300928C32 /* Main.storyboard in Resources */,
 				0833C6EF2864931300928C32 /* GameScene.sks in Resources */,
 				0833C6FA2864931600928C32 /* Assets.xcassets in Resources */,
